@@ -1,8 +1,9 @@
-
-
 document.addEventListener("DOMContentLoaded", function() {
     const logo = document.getElementById("bg-effect");
-    for (let i = 0; i < 500; i++) { // Nombre de paillettes
+    const windowWidth = window.innerWidth;
+    const numberOfSparkles = windowWidth < 1024 ? 200 : 500; // 200 paillettes pour les écrans < 1024px, sinon 500
+
+    for (let i = 0; i < numberOfSparkles; i++) {
         let sparkle = document.createElement("div");
         sparkle.classList.add("sparkle-glow");
         sparkle.style.left = Math.random() * logo.clientWidth + "px";
