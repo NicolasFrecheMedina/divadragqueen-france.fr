@@ -1,0 +1,173 @@
+body {
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+
+.background{
+    background-image: url("./srv/background-blk.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+
+.home-logo{
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#home-logo-01{
+    width: 200px;
+    height: 100%;
+    margin-left: 50px;
+}
+#home-logo-02{
+    margin-top: 50px;
+    margin-right: 30px;
+    width: 600px;
+    height: 100%;
+    height: auto;
+    position: relative;
+    /* opacity: 0;
+    animation: slideIn 2s ease-out forwards; */
+}
+
+/* 
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+} */
+
+/* test */
+
+
+
+.sparkle-glow {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: radial-gradient(circle, gold, white, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 5px gold, 0 0 10px white;
+    animation: sparkleGlow 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes sparkleGlow {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+        text-shadow: none;
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px rgba(255, 223, 0, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: 0px 0px 15px rgba(255, 223, 0, 0.8); 
+    }
+}
+
+h1 {
+    margin-left: 50px;
+    color: white;
+    margin-top: -130px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    animation: fadeInUp 2s ease-out forwards;
+} */
+
+@keyframes lightSweep {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: -100%; opacity: 0;}
+}
+
+h1 {
+    padding-left: 50px;
+    color: white;
+    margin-top: -130px;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0px 0px 15px rgba(255, 223, 0, 0.6),
+                 0px 0px 30px rgba(255, 223, 0, 0.5);
+}
+
+/* Effet de balayage lumineux discret */
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 70%);
+    animation: lightSweep 2.5s ease-in-out 1.2s forwards;
+}
+
+
+
+/* test */
+/* h1{
+    margin-left: 50px;
+    color: white;
+    margin-top: -130px;
+    font-weight: 900 ;
+    font-family: 'Poppins', sans-serif;
+} */
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 48px 30px 0px 30px;
+    padding-bottom: 40px;
+}
+
+.sub-menu > img{
+    width: 240px;
+    height: 240px;
+    animation: neonGlowSilver 2s infinite alternate ease-in-out;
+    border-radius: 10px; /* Pour adoucir l'effet */
+}
+
+@keyframes neonGlowSilver {
+    0% {
+        box-shadow: 0 0 5px silver, 0 0 20px silver, 0 0 30px silver;
+    }
+    50% {
+        box-shadow: 0 0 10px #c0c0c0, 0 0 40px #c0c0c0, 0 0 50px #c0c0c0;
+    }
+    100% {
+        box-shadow: 0 0 5px silver, 0 0 20px silver, 0 0 30px silver;
+    }
+}
