@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const logo = document.getElementById("bg-effect");
     const windowWidth = window.innerWidth;
     const numberOfSparkles = windowWidth < 1024 ? 200 : 500; // 200 paillettes pour les écrans < 1024px, sinon 500
@@ -20,12 +20,13 @@ document.querySelectorAll('.sub-menu').forEach(card => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
-    if (form) {
-        const handleSubmit = (event) => {
+
+    const forms = document.querySelectorAll('form');
+
+    forms.forEach((form) => {
+        form.addEventListener('submit', function (event) {
             event.preventDefault();
-            const myForm = event.target;
-            const formData = new FormData(myForm);
+            const formData = new FormData(form);
 
             fetch("/", {
                 method: "POST",
@@ -34,10 +35,30 @@ document.addEventListener('DOMContentLoaded', function () {
             })
                 .then(() => {
                     alert("Votre message a bien été envoyé, merci!");
-                    myForm.reset();
+                    form.reset();
                 })
                 .catch((error) => alert(error));
-        };
-        form.addEventListener('submit', handleSubmit);
-    }
+        });
+    });
+
+    // const form = document.querySelector('form');
+    // if (form) {
+    //     const handleSubmit = (event) => {
+    //         event.preventDefault();
+    //         const myForm = event.target;
+    //         const formData = new FormData(myForm);
+
+    //         fetch("/", {
+    //             method: "POST",
+    //             headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //             body: new URLSearchParams(formData).toString(),
+    //         })
+    //             .then(() => {
+    //                 alert("Votre message a bien été envoyé, merci!");
+    //                 myForm.reset();
+    //             })
+    //             .catch((error) => alert(error));
+    //     };
+    //     form.addEventListener('submit', handleSubmit);
+    // }
 });
