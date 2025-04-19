@@ -175,7 +175,6 @@ h1::after {
 }
 
 .menu {
-
     margin: 48px 30px 0px 30px;
     padding-bottom: 40px;
     display: flex;
@@ -194,9 +193,122 @@ h1::after {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out;
+    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out; */
+    cursor: pointer;
+}
+
+.sub-menu-01 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    flex: 1 1 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
     animation: neonGlowSilver 1.5s infinite alternate ease-in-out;
     cursor: pointer;
 }
+
+.sub-menu-01::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background:black ;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sub-menu-01 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.sub-menu:hover {
+    transform: scale(1.05);
+}
+
+
+.sub-menu-01:hover {
+    transform: scale(1.05);
+}
+
+ .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
+}
+
+.sub-menu.flipped .card-inner {
+    transform: rotateY(180deg);
+    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: white;
+    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
+}
+
+.card-back > p {
+    margin: 0px 12px;
+}
+
+.card-front {
+    background: #000;
+    color: white;
+    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
+}
+
+.card-front img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-front span {
+    padding: 10px;
+    font-weight: bold;
+    /* font-size: 1.2rem; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: gold;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
+} 
 
 @keyframes neonGlowSilver {
     0% {
@@ -211,34 +323,6 @@ h1::after {
         box-shadow: 0 0 4px silver, 0 0 10px silver, 0 0 15px silver;
     }
 }
-
-.sub-menu img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-}
-
-.sub-menu::after {
-    content: attr(data-text);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background: white;
-    color: black;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 0;
-    letter-spacing: 1px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.sub-menu:hover {
-    transform: scale(1.05);
-}
-
 
 footer {
     background: #111;
@@ -392,7 +476,7 @@ h3 {
 
 /* Élément gauche : Image */
 .inscription-image {
-    width: 40%;
+    width: 30%;
     position: relative;
     margin: 40px 40px;
     transition: transform 0.3s ease-in-out;
@@ -566,7 +650,7 @@ h3 {
 }
 
 .contact-image{
-    width: 40%;
+    width: 30%;
     position: relative;
     margin: 40px 40px;
     position: relative;
@@ -581,7 +665,7 @@ h3 {
 }
 .contact-image>img {
     width: 100%;
-    height: 100%;
+    /* height: 80%; */
     object-fit: cover;
     border-radius: 20px;
 }
@@ -593,13 +677,33 @@ h3 {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: white;
-    color: black;
+    background:black;
+    color:  white;
     text-align: center;
     font-weight: bold;
     padding: 10px 0;
     letter-spacing: 1px;
     font-family: 'Poppins', sans-serif;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-container > h3 {
+    text-align: center;
+    width: 80%;
+}
+
+section > p > strong {
+    color:#b02161;
+}
+
+.logo-naco-dev {
+    width: 80px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -644,6 +748,7 @@ h3 {
 
     .main-content {
         margin: 0px 20px;
+        padding: 1rem;
     }
 
     .banner {
@@ -705,6 +810,10 @@ h3 {
         flex: 1 1 100%;
         max-width: 100%;
     }
+    .sub-menu-01 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 
     .home-logo {
         justify-content: center;
@@ -731,6 +840,9 @@ h3 {
         margin: 30px 50px 0px 50px;
         padding-bottom: 20px;
     }
+    .sub-menu:hover {
+        transform: none;
+    }
 
     .footer-links {
         font-size: x-small;
@@ -745,5 +857,12 @@ h3 {
 
     .footer-social {
         margin-bottom: 5px;
+    }
+    .info-container{
+        margin: 0 20px;
+    }
+    .info-container h3{
+        font-size: xx-large;
+        margin: 25px 0px
     }
 }

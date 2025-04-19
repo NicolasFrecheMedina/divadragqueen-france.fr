@@ -12,3 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
         logo.parentElement.appendChild(sparkle);
     }
 });
+
+document.querySelectorAll('.sub-menu').forEach(card => {
+    card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+    });
+});

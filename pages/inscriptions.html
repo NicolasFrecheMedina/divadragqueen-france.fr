@@ -16,6 +16,20 @@
 
 
 <body>
+        <!--
+ b.             8          .8.              ,o888888o.        ,o888888o.               8 888888888o.      8 8888888888   `8.`888b           ,8'
+888o.          8         .888.            8888     `88.   . 8888     `88.             8 8888    `^888.   8 8888          `8.`888b         ,8'
+Y88888o.       8        :88888.        ,8 8888       `8. ,8 8888       `8b            8 8888        `88. 8 8888           `8.`888b       ,8'
+.`Y888888o.    8       . `88888.       88 8888           88 8888        `8b           8 8888         `88 8 8888            `8.`888b     ,8'
+8o. `Y888888o. 8      .8. `88888.      88 8888           88 8888         88           8 8888          88 8 888888888888     `8.`888b   ,8'
+8`Y8o. `Y88888o8     .8`8. `88888.     88 8888           88 8888         88           8 8888          88 8 8888              `8.`888b ,8'
+8   `Y8o. `Y8888    .8' `8. `88888.    88 8888           88 8888        ,8P           8 8888         ,88 8 8888               `8.`888b8'
+8      `Y8o. `Y8   .8'   `8. `88888.   `8 8888       .8' `8 8888       ,8P            8 8888        ,88' 8 8888                `8.`888'
+8         `Y8o.`  .888888888. `88888.     8888     ,88'   ` 8888     ,88'             8 8888    ,o88P'   8 8888                 `8.`8'
+8            `Yo .8'       `8. `88888.     `8888888P'        `8888888P'               8 888888888P'      8 888888888888          `8.`
+
+                                                                 Powered by 🅽🅰🅲🅾 🅳🅴🆅 ✨
+-->
     <div class="background" id="bg-effect">
         <!-- <div class="container-inscription">
             <div class="banner-image-inscription">
@@ -104,16 +118,13 @@
 
             <div class="inscription-formulaire">
                 <h3 class="inscription-titre">Inscription</h3>
-
-                <form class="form-inscription" action="#" method="POST">
-
+                <form class="form-inscription" method="POST" netlify-honeypot="bot-field" netlify>
                     <select name="region" class="input-region" required>
                         <option value="" disabled selected>Région représentée</option>
                         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
                         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
                         <option value="Bretagne">Bretagne</option>
                         <option value="Centre-Val de Loire">Centre-Val de Loire</option>
-                        <option value="Corse">Corse</option>
                         <option value="Grand Est">Grand Est</option>
                         <option value="Hauts-de-France">Hauts-de-France</option>
                         <option value="Île-de-France">Île-de-France</option>
@@ -121,10 +132,9 @@
                         <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
                         <option value="Occitanie">Occitanie</option>
                         <option value="Pays de la Loire">Pays de la Loire</option>
-                        <option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
+                        <option value="Provence-Alpes-Côte d'Azur - Corse">Provence-Alpes-Côte d'Azur / Corse</option>
                         <option value="Outre-mer">Outre-mer</option>
                     </select>
-
                     <div class="row">
                         <input type="text" name="prenom" class="input-prenom" placeholder="Prénom" required>
                         <input type="text" name="nom" class="input-nom" placeholder="Nom" required>
@@ -140,12 +150,10 @@
                             required>
                         <input type="text" name="commune" class="input-commune" placeholder="Commune" required>
                     </div>
-
                     <div class="row">
                         <input type="tel" name="telephone" class="input-telephone" placeholder="Téléphone" required>
                         <input type="email" name="email" class="input-email" placeholder="Email" required>
                     </div>
-
                     <div class="row">
                         <input type="date" name="date_naissance" class="input-date-naissance" required>
                         <input type="text" name="reseau_social" class="input-reseau-social"
@@ -154,43 +162,35 @@
                     <div class="line">
                         <textarea name="motivation" class="input-motivation" placeholder="Description / Motivation"
                             required></textarea>
-
                     </div>
-
                     <div class="accept-inscription-container">
                         <label class="checkbox-label">
                             <input type="checkbox" name="confidentialite" required>
                             <div>
-                                J'accepte la <a href="#">politique de confidentialité</a> du site Comité Miss Drag Queen
+                                J'accepte la <a href="./infos.html#politique-confidentialite">politique de confidentialité</a> du site Comité Miss Drag Queen
                                 France.
                             </div>
-
                         </label>
-
                         <label class="checkbox-label">
                             <input type="checkbox" name="reglement" required>
                             <div>
-                                J'accepte le <a href="#">règlement du concours</a> et j'y adhère sans réserve.
+                                J'accepte le <a href="./coucours.html">règlement du concours</a> et j'y adhère sans réserve.
                             </div>
                         </label>
                     </div>
-
-
                     <button type="submit" class="btn-valider">Valider</button>
-
                 </form>
             </div>
-
         </div>
 
         <footer>
             <div class="footer-container">
                 <div class="footer-links">
-                    <a href="./infos.html" class="footer-link">CGU</a>
+                    <a href="./infos.html#cgu" class="footer-link">CGU</a>
                     <div class="responsive-footer">|</div>
-                    <a href="./infos.html" class="footer-link">MENTIONS LÉGALES</a>
+                    <a href="./infos.html#mentions-legales" class="footer-link">MENTIONS LÉGALES</a>
                     <div class="responsive-footer">|</div>
-                    <a href="./infos.html" class="footer-link">POLITIQUE DE CONFIDENTIALITÉ</a>
+                    <a href="./infos.html#politique-confidentialite" class="footer-link">POLITIQUE DE CONFIDENTIALITÉ</a>
                     <div class="responsive-footer">|</div>
                     <a href="#" class="footer-link">INSCRIPTION</a>
                     <div class="responsive-footer">|</div>
@@ -198,9 +198,8 @@
                 </div>
                 <div class="footer-social">
                     <span class="follow-us">FOLLOW US</span>
-                    <!-- <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a> -->
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/divadragqueenfranceofficiel?igsh=b3A2aWt0Zmlwb2pk" target="blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61575319885004" target="blank" class="social-icon"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
             <div class="footer-copyright">
