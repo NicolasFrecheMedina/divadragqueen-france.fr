@@ -193,7 +193,6 @@ h1::after {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out;
-    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out; */
     cursor: pointer;
 }
 
@@ -218,7 +217,7 @@ h1::after {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background:black ;
+    background: black;
     color: white;
     text-align: center;
     font-weight: bold;
@@ -243,18 +242,16 @@ h1::after {
     transform: scale(1.05);
 }
 
- .card-inner {
+.card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.8s ease;
-    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
 }
 
 .sub-menu.flipped .card-inner {
     transform: rotateY(180deg);
-    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
 }
 
 .card-front,
@@ -263,23 +260,21 @@ h1::after {
     backface-visibility: hidden;
     border-radius: 15px;
     overflow: visible;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-color: white;
-    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
 }
 
-.card-back > p {
+.card-back>p {
     margin: 0px 12px;
 }
 
 .card-front {
     background: #000;
     color: white;
-    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
 }
 
 .card-front img {
@@ -291,7 +286,6 @@ h1::after {
 .card-front span {
     padding: 10px;
     font-weight: bold;
-    /* font-size: 1.2rem; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -307,8 +301,7 @@ h1::after {
     padding: 5px;
     font-family: 'Poppins', sans-serif;
     font-size: smaller;
-    /* animation: neonGlowSilver 1.5s infinite alternate ease-in-out;  */
-} 
+}
 
 @keyframes neonGlowSilver {
     0% {
@@ -435,9 +428,7 @@ footer {
 
 .logo-c-01 {
     max-width: 150px;
-    /* Limite la taille du logo */
     height: auto;
-    /* Assure que l'image garde ses proportions */
 }
 
 .container-inscription {
@@ -474,7 +465,6 @@ h3 {
     justify-content: center;
 }
 
-/* Élément gauche : Image */
 .inscription-image {
     width: 30%;
     position: relative;
@@ -499,7 +489,6 @@ h3 {
     height: auto;
 }
 
-/* Élément droit : Formulaire */
 .inscription-formulaire {
     width: 50%;
     display: flex;
@@ -510,9 +499,6 @@ h3 {
     margin: 10px 40px;
 }
 
-
-
-/* Formulaire */
 .form-inscription {
     display: flex;
     flex-direction: column;
@@ -632,7 +618,6 @@ h3 {
     resize: vertical;
 }
 
-/* Bouton du formulaire */
 #btn-envoyer {
     width: 300px;
     padding: 10px;
@@ -649,7 +634,7 @@ h3 {
     background-color: #b02161;
 }
 
-.contact-image{
+.contact-image {
     width: 30%;
     position: relative;
     margin: 40px 40px;
@@ -663,9 +648,9 @@ h3 {
     animation: neonGlowSilver 1.5s infinite alternate ease-in-out;
     cursor: pointer;
 }
+
 .contact-image>img {
     width: 100%;
-    /* height: 80%; */
     object-fit: cover;
     border-radius: 20px;
 }
@@ -677,8 +662,8 @@ h3 {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background:black;
-    color:  white;
+    background: black;
+    color: white;
     text-align: center;
     font-weight: bold;
     padding: 10px 0;
@@ -686,20 +671,20 @@ h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-.info-container{
+.info-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.info-container > h3 {
+.info-container>h3 {
     text-align: center;
     width: 80%;
 }
 
-section > p > strong {
-    color:#b02161;
+section>p>strong {
+    color: #b02161;
 }
 
 .logo-naco-dev {
@@ -720,13 +705,16 @@ section > p > strong {
     .logo {
         width: 100px;
     }
-    #btn-envoyer{
-       width: 250px;
+
+    #btn-envoyer {
+        width: 250px;
     }
+
     .contact-form .form-input,
     .contact-form .form-textarea {
         min-width: 250px;
     }
+
     .contact-image,
     .inscription-image,
     .inscription-formulaire {
@@ -810,6 +798,7 @@ section > p > strong {
         flex: 1 1 100%;
         max-width: 100%;
     }
+
     .sub-menu-01 {
         flex: 1 1 100%;
         max-width: 100%;
@@ -840,6 +829,7 @@ section > p > strong {
         margin: 30px 50px 0px 50px;
         padding-bottom: 20px;
     }
+
     .sub-menu:hover {
         transform: none;
     }
@@ -858,10 +848,12 @@ section > p > strong {
     .footer-social {
         margin-bottom: 5px;
     }
-    .info-container{
+
+    .info-container {
         margin: 0 20px;
     }
-    .info-container h3{
+
+    .info-container h3 {
         font-size: xx-large;
         margin: 25px 0px
     }
