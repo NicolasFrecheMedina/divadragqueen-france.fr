@@ -1017,4 +1017,8 @@ section>p>strong {
         font-size: xx-large;
         margin: 25px 0px
     }
+    .candidate-link{
+        font-size: x-small;
+    }
+    
 }
