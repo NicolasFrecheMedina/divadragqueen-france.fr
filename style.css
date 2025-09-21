@@ -346,7 +346,7 @@ h1::after {
 }
 
 .partner-item {
-    flex: 0 0 calc(50% - 35px);
+    flex: 0 0 calc(50% - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
