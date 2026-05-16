@@ -81,8 +81,8 @@ body {
     top: 45px;
 }
 
-#home-affiche{
-    width:400px;
+#home-affiche {
+    width: 400px;
     height: auto;
     margin-top: 40px;
     margin-right: 50px;
@@ -90,10 +90,25 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.link-affiche{
+.link-affiche {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.video-affiche-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-affiche-video {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
 }
 
 .banner {
@@ -116,7 +131,7 @@ body {
     margin-top: 50px;
     border-radius: 15px;
     margin-bottom: 30px;
-    background-image: url(./srv/banner-elections.png);
+    background-image: url(./srv/elections-2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -131,7 +146,7 @@ body {
     margin-top: 50px;
     border-radius: 15px;
     margin-bottom: 30px;
-    background-image: url(./srv/banner-concours.png);
+    background-image: url(./srv/banner-concours-2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -150,6 +165,7 @@ body {
 #title-elections {
     margin-top: 0px;
 }
+
 
 /* End page election */
 
@@ -207,9 +223,8 @@ h1::after {
 .menu {
     margin: 48px 30px 0px 30px;
     padding-bottom: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 20px;
 }
 
@@ -230,8 +245,8 @@ h1::after {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    flex: 1 1 calc(25% - 15px);
-    max-width: calc(25% - 15px);
+    width: 100%;
+    max-width: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,6 +269,7 @@ h1::after {
     padding: 10px 0;
     letter-spacing: 1px;
     font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.75rem, 1vw, 1rem);
 }
 
 .sub-menu-01 img {
@@ -368,8 +384,8 @@ h1::after {
 }
 
 .partner-logo {
-    width: 70px;
-    height: 70px;
+    width: 60ssspx;
+    height: 60ssspx;
     object-fit: contain;
     border-radius: 10px;
 }
@@ -473,7 +489,7 @@ h1::after {
     transition: transform 500ms ease;
 }
 
-.candidate-modal__close:hover{
+.candidate-modal__close:hover {
     transform: rotate(360deg);
     color: gold;
 }
@@ -641,9 +657,9 @@ h3 {
 }
 
 .inscription-image {
-    width: 30%;
+    width: 50%;
     position: relative;
-    margin: 40px 40px;
+    margin: 80px 40px;
     transition: transform 0.3s ease-in-out;
     animation: neonGlowSilver 1.5s infinite alternate ease-in-out;
     border-radius: 20px;
@@ -940,7 +956,7 @@ section>p>strong {
         margin-top: 30px;
         border-radius: 15px;
         margin-bottom: 30px;
-        background-image: url(./srv/m-elections.png);
+        background-image: url(./srv/m-elections-2.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -949,14 +965,14 @@ section>p>strong {
     }
 
     .banner-image-mobile-02 {
-        width: 87%;
+        width: 80%;
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
         margin-top: 30px;
         border-radius: 15px;
         margin-bottom: 30px;
-        background-image: url(./srv/m-concours.png);
+        background-image: url(./srv/banner-concours-2.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -981,16 +997,16 @@ section>p>strong {
 
     .home-logo {
         justify-content: center;
-        flex-direction:column ;
+        flex-direction: column;
         align-items: center;
     }
 
     #home-logo-01 {
         width: 85%;
-        
+
     }
 
-    #home-affiche{
+    #home-affiche {
         width: 85%;
         margin: 0px 20px 20px;
     }
@@ -1010,6 +1026,7 @@ section>p>strong {
         gap: 40px;
         margin: 30px 50px 0px 50px;
         padding-bottom: 20px;
+        grid-template-columns: 1fr;
     }
 
     .sub-menu:hover {
@@ -1039,8 +1056,242 @@ section>p>strong {
         font-size: xx-large;
         margin: 25px 0px
     }
-    .candidate-link{
+
+    .candidate-link {
         font-size: x-small;
     }
-    
+
+}
+
+/* Correction spécifique page Election */
+.menu.election-menu {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 48px auto 0 auto !important;
+    padding: 0 30px 40px 30px;
+    box-sizing: border-box;
+}
+
+.menu.election-menu .sub-menu {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    max-width: 300px !important;
+    height: 300px !important;
+    min-height: 300px !important;
+}
+
+.menu.election-menu .card-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.menu.election-menu .card-front,
+.menu.election-menu .card-back {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+}
+
+.menu.election-menu .card-front {
+    justify-content: flex-start;
+}
+
+.menu.election-menu .card-front img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.menu.election-menu .card-front span {
+    height: 70px;
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu.election-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        max-width: 100%;
+        margin: 30px auto 0 auto !important;
+        padding: 0 30px 30px 30px;
+    }
+
+    .menu.election-menu .sub-menu {
+        width: 100% !important;
+        max-width: 420px !important;
+        height: 320px !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu.election-menu .sub-menu {
+        width: 85% !important;
+        max-width: 360px !important;
+        height: 360px !important;
+        min-height: 360px !important;
+        margin: 0 auto;
+    }
+
+    .menu.election-menu .card-inner,
+    .menu.election-menu .card-front,
+    .menu.election-menu .card-back {
+        height: 360px !important;
+        min-height: 360px !important;
+    }
+
+    .menu.election-menu .card-front img {
+        height: 280px !important;
+        object-fit: cover;
+    }
+
+    .menu.election-menu .card-front span {
+        height: 80px !important;
+        min-height: 80px !important;
+    }
+}
+/* Correction spécifique carte candidates */
+.menu.election-menu .candidates-card .card-back {
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 14px 10px;
+    box-sizing: border-box;
+}
+
+.menu.election-menu .candidates-card .card-back > p {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+}
+
+.menu.election-menu .candidates-card .candidate-list {
+    gap: 5px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.menu.election-menu .candidates-card .candidate-link {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    line-height: 1.1;
+    max-width: 95%;
+}
+
+/* Page Nos Ambassadrices */
+.ambassadrices-page {
+    min-height: calc(100vh - 120px);
+    padding: 40px 30px 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ambassadrices-logo-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ambassadrices-logo {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.ambassadrices-title {
+    padding-left: 0;
+    margin: 10px 0 35px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.ambassadrices-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ambassadrice-card {
+    width: min(90vw, 360px);
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(45, 45, 45, 0.92));
+    border-radius: 22px;
+    overflow: hidden;
+    animation: neonGlowSilver 1.5s infinite alternate ease-in-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.ambassadrice-photo-wrapper {
+    width: 100%;
+    background: black;
+}
+
+.ambassadrice-photo {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    display: block;
+}
+
+.ambassadrice-caption {
+    background: black;
+    padding: 20px 15px 24px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ambassadrice-name {
+    margin: 0 0 8px;
+    color: gold;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.ambassadrice-title-text {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .ambassadrices-page {
+        padding: 25px 20px 40px;
+    }
+
+    .ambassadrices-logo {
+        width: 140px;
+    }
+
+    .ambassadrices-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .ambassadrice-card {
+        width: min(90vw, 340px);
+    }
+
+    .ambassadrice-photo {
+        height: 420px;
+    }
+
+    .ambassadrice-name {
+        font-size: 1rem;
+    }
+
+    .ambassadrice-title-text {
+        font-size: 0.95rem;
+    }
 }
