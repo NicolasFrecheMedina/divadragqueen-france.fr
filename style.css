@@ -384,8 +384,8 @@ h1::after {
 }
 
 .partner-logo {
-    width: 60ssspx;
-    height: 60ssspx;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     border-radius: 10px;
 }
