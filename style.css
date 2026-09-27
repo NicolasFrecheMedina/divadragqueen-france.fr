@@ -96,19 +96,35 @@ body {
     align-items: center;
 }
 
-.video-affiche-wrapper {
+.official-poster-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.home-affiche-video {
+.home-affiche-image {
     width: 100%;
-    max-width: 260px;
-    aspect-ratio: 9 / 16;
-    object-fit: cover;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
     display: block;
+}
+
+.home-event-details {
+    margin: 0 auto;
+    padding: 0 20px 15px;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-event-details p {
+    margin: 5px 0;
+}
+
+.home-event-details .billet-bouton {
+    margin: 15px 0 0;
 }
 
 .banner {
@@ -405,6 +421,11 @@ h1::after {
 .billet-bouton:hover {
     background-color: #f11ef8;
     color: gold;
+}
+
+.map-bouton {
+    margin: 10px 0 0;
+    padding: 7px 12px;
 }
 
 .candidate-list {
@@ -1185,6 +1206,144 @@ section>p>strong {
     padding: 3px 8px;
     line-height: 1.1;
     max-width: 95%;
+    overflow-wrap: anywhere;
+}
+
+.election-edition {
+    width: 100%;
+}
+
+.edition-title {
+    margin: 30px auto 0;
+    padding: 0 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+
+.election-history {
+    padding-top: 5px;
+}
+
+.menu.election-menu.history-menu {
+    margin-top: 30px !important;
+}
+
+.menu.election-menu .candidate-list--current {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+}
+
+.menu.election-menu .candidate-list--current li,
+.menu.election-menu .candidate-list--current .candidate-link {
+    width: 100%;
+}
+
+.event-card-back,
+.jury-card-back,
+.winner-card-back {
+    justify-content: center;
+    gap: 10px;
+}
+
+.event-card-back p,
+.jury-card-back p,
+.winner-card-back p {
+    color: white;
+    line-height: 1.4;
+}
+
+.event-card-back p:first-child,
+.jury-card-back p:first-child,
+.winner-card-back p:first-child {
+    color: gold;
+}
+
+.card-note {
+    font-size: 0.75rem;
+}
+
+/* Ajustements limités à la page Élections 2027 */
+.elections-page .venue-card .card-front img {
+    object-position: center 45%;
+}
+
+.elections-page .jury-card .card-front img {
+    object-position: center 30%;
+}
+
+.elections-page .jury-card-back .card-note {
+    max-width: 250px;
+    margin-top: 4px;
+    color: white;
+    font-style: italic;
+    line-height: 1.45;
+}
+
+.elections-page .current-candidates-card .card-back {
+    gap: 0;
+}
+
+.elections-page .current-candidates-card .candidate-list--current {
+    flex: 1;
+    min-height: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    gap: 6px;
+}
+
+.elections-page .current-candidates-card .candidate-list--current li {
+    min-width: 0;
+    width: 100%;
+}
+
+.elections-page .current-candidates-card .candidate-list--current li:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 3px);
+}
+
+.elections-page .current-candidates-card .candidate-list--current .candidate-link {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: 4px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 0.68rem;
+    line-height: 1.15;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .edition-title {
+        font-size: 1.15rem;
+    }
+
+    .home-event-details {
+        font-size: 0.85rem;
+    }
+
+    #title-elections {
+        padding: 0 20px;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .menu.election-menu {
+        padding: 0 15px 30px !important;
+    }
+
+    .menu.election-menu .sub-menu {
+        flex: 0 1 100% !important;
+        width: min(100%, 360px) !important;
+        max-width: 360px !important;
+    }
 }
 
 /* Page Nos Ambassadrices */
